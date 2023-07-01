@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Document</title>
+</head>
+
+<body>
+
+<section class="reg" id="signIn">
+  <a href="#" class="reg__auth" >Авторизоваться</a>
+  <div class="reg-wrap">
+    
+    <h1 class="reg__title">Регистрация</h1>
+    
+    <form action="" class="reg-form">
+      <label class="email"><p>Email</p><span class="imp email"></span><input type="text" name="" id="email" class="form_input" placeholder="Введите email"></label>
+      <label class="phone"><p>Телефон</p><span class="imp phone"></span><input type="text" name="" id="phone" class="form_input" placeholder="Введите телефон" pattern=".{10,15}"></label>
+      <label class="pswd"><p>Пароль</p><span class="imp pswd"></span><input type="password" name="" id="pswd" class="form_input" placeholder="Введите пароль" pattern=".{8,40}"></label>
+      <label class="pswd"><p>Повторить Пароль</p><span class="imp pswd"></span><input type="password" name="" id="rep-pswd" class="form_input" placeholder="Введите пароль"></label>
+      <label class="checkbox"><span class="imp checkbox"></span><input type="checkbox" name="" id="agree" class="custombox"><span class="checkmark"></span><p class="agreement">Я согласен с <a href="#">Правилами пользования приложением</a></p></label>
+    </form>
+    <button id="reg" class="btn">Регистрация</button>
+  </div>
+</section>
+<section class="alert">
+<span class="alert__text">Регистрация прошла успешно!Редирект на страницу входа...</span>
+</section>
+<section class="auth" id="logIn">
+  <a href="#" class="reg__auth" >Зарегистрироваться</a>
+  <div class="auth-wrap">
+    <h1 class="auth__title">Вход</h1>
+    
+    <form action="" class="reg-form">
+      <label class="email"><p>Email</p><span class="imp email"></span><input type="text" name="" id="auth-email" class="form_input" placeholder="Введите email"></label>
+      <label class="pswd"><p>Пароль</p><span class="imp pswd"></span><input type="password" name="" id="auth-pswd" class="form_input" placeholder="Введите пароль"></label>
+      <label class="checkbox"><span class="imp checkbox"></span><input type="checkbox" name="" id="auth-agree" class="custombox"><span class="checkmark"></span><p class="agreement">Я согласен с <a href="#">Правилами пользования приложением</a></p></label>
+    </form>
+    <button id="auth" class="btn">Вход</button>
+  </div>
+</section>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+@mixin main-text700 {
+  font: {
+    family: 'Roboto';
+    style: normal;
+    weight: 700;
+    line-height: 16px;
+  }
+}
+
+@mixin size-w-h($w, $h) {
+  width: $w;
+  height: $h;
+}

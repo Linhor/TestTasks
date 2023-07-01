@@ -1,0 +1,237 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reg, .auth {
+  width: 600px;
+  height: 600px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 82px;
+}
+.reg-wrap, .auth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 34px;
+  padding-right: 46px;
+}
+.reg__title, .auth__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-line-height: 16px;
+  font-size: 50px;
+  line-height: 50px;
+  color: #787878;
+  margin: 0 auto;
+}
+.reg-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.reg__auth {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-line-height: 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #1A226B;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 11px;
+  padding-top: 11px;
+}
+.reg-form .form_input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-line-height: 16px;
+  width: 509px;
+  height: 49px;
+  background: #FFFFFF;
+  border: 2px solid #787878;
+  border-radius: 10px;
+  font-size: 28px;
+  color: #787878;
+  padding-left: 15px;
+}
+.reg-form .form_input::placeholder {
+  color: #CCCCCC;
+  padding-left: 15px;
+}
+.reg-form label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-line-height: 16px;
+  padding-top: 13px;
+  font-size: 16px;
+  color: #787878;
+}
+.reg-form label > p {
+  margin-left: 10px;
+  padding-bottom: 5px;
+}
+.reg-form .checkbox {
+  display: flex;
+  align-items: center;
+}
+.reg-form .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.reg-form .checkbox p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-line-height: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #787878;
+}
+.reg-form .checkbox a {
+  color: #787878;
+}
+.reg-form .custombox {
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 2px solid #787878;
+  border-radius: 10px;
+}
+.reg-form .checkmark {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  background-color: #eee;
+  background-image: url("/img/checkbox/Rectangle3.svg");
+  background-repeat: no-repeat;
+}
+.reg-form .checkmark:after {
+  content: "";
+  display: none;
+}
+.reg-form .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.reg-form .checkbox .checkmark:after {
+  width: 17px;
+  height: 17px;
+  margin-top: 5px;
+  margin-left: 4px;
+  background-image: url("/img/checkbox/✓.svg");
+  background-repeat: no-repeat;
+}
+.reg .btn, .auth .btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-line-height: 16px;
+  width: 180px;
+  height: 52px;
+  font-size: 24px;
+  color: #FFFFFF;
+  background: #1A226B;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 0;
+}
+.reg .warn-span, .auth .warn-span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-line-height: 16px;
+  display: block;
+  position: absolute;
+  font-size: 10px;
+  color: #CB2424;
+}
+.reg .warn, .auth .warn {
+  color: #CB2424;
+  border-color: #CB2424;
+}
+.reg #warn-agree, .auth #warn-agree {
+  margin-top: 37px;
+}
+.reg .imp, .auth .imp {
+  position: absolute;
+  content: "";
+  margin-top: 8px;
+  margin-left: -11px;
+}
+.reg .imp::after, .auth .imp::after {
+  content: "*";
+}
+
+.auth {
+  display: none;
+}
+.alert {
+  display: none;
+  margin-top: 100px;
+  width: 500px;
+  height: 30px;
+  margin: 0 auto;
+}
+.alert__text {
+  color: #3ebb0d;
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */
