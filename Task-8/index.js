@@ -12,6 +12,6 @@ console.log(data)
 console.log('done')
 var os = require('os')
 console.log(os.type());
-console.log(__dirname)
+console.log(os.homedir())
   });
 });
