@@ -20,24 +20,26 @@ function PlayPause() {
   }
 }
 
-//return to start pic of video
 state.addEventListener("ended", function () {
   this.src = this.src
 });
 
-//time line progress
-function progressUp() {
-  d = state.currentTime
-  progress.max = state.duration;
-  progress.value = state.currentTime;
-  let min = Math.floor(state.currentTime / 60)
-  if (min < 10) {
-    min = '0' + min
-  }
-  let sec = Math.floor(state.currentTime % 60)
-  if (sec < 10) {
-    sec = '0' + sec;
-  }
+function progressUp(){
+progress.max = state.duration;
+progress.value = state.currentTime
+let curMin = Math.floor(state.currentTime / 60);
+let curSec = Math.floor(state.currentTime - curMin * 60)
+let curMmm = Math.floor((state.currentTime - curMin - curSec) * 1000)
 
-  timeCode.innerHTML = `${min}:${sec}`
+if (curMin < 10) {
+      curMin = '0' + curMin
+    }
+    if (curSec < 10) {
+          curSec = '0' + curSec;
+    }
+    if (curMmm < 10) {
+         curMmm = curMmm;
+        }
+
+timeCode.innerHTML = `${curMin}:${curSec}:${curMmm}`
 }

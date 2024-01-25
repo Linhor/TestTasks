@@ -20,9 +20,9 @@ function RandomGame() {
     parent.appendChild(sqr);
   }
 
-  var renderSqr = function () {
-    var count = RandomNum(10, 100);
-    for (var i = 0; i < count; i++) {
+  let renderSqr = function () {
+    let count = RandomNum(10, 100);
+    for (let i = 0; i < count; i++) {
       createSqr(table);
     }
   };

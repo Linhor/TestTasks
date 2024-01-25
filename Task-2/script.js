@@ -16,13 +16,10 @@ function draw() {
     context.moveTo(190, 190)
     context.strokeRect(100, 260, 170, 170);
     
-
-
     context.beginPath();
     context.moveTo(390, 490)
     context.strokeRect(400, 260, 170, 100);
     
-
     context.beginPath();
     context.arc(550,99,80,0,Math.PI*2,true);
     context.stroke();

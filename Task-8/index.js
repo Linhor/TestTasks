@@ -10,8 +10,8 @@ console.log(data)
     if (err) throw err;
 
 console.log('done')
-var os = require('os')
+let os = require('os')
 console.log(os.type());
-console.log(os.homedir())
+console.log(os.homedir());
   });
 });

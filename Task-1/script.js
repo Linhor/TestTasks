@@ -1,18 +1,40 @@
-const img_content = document.getElementById('img-content');
-const next = document.getElementById('next');
-const prev = document.getElementById('prev');
+class Slider {
+    constructor(images) {
+        this.images = images;
+        this.currentSlide = 0;
+        this.init();
+    }
 
-const images = ['image186.jpg', '123.jpg', '222.jpg', '111.jpg', '444.jpg']
-img_content.innerHTML = "<img class='img' src='./img/gallery/444.jpg'>"
+    init() {
+        this.createSlides();
+        this.showSlide();
+        setInterval(() => this.nextSlide(), 3000);
+    }
 
-let i = images.length;
+    createSlides() {
+        const slidesContainer = document.getElementById('img-content');
+        this
+            .images
+            .forEach((image, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'img';
+                slide.style.backgroundImage = `url('./img/gallery/${image}')`;
+                slide.style.backgroundColor = `${image}`;
+                slidesContainer.appendChild(slide);
+            });
+    }
 
-next.onclick = () => {
-  i = (i < images.length) ? (i = i + 1) : (i = 1);
-  img_content.innerHTML = "<img class='img' src=./img/gallery/" + images[i - 1] + ">";
+    showSlide() {
+        const slidesContainer = document.getElementById('img-content');
+        slidesContainer.style.transform = `translateX(${ - this.currentSlide * 100}%)`;
+    }
+
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.images.length;
+        this.showSlide();
+    }
 }
 
-prev.onclick = () => {
-  i = (i < images.length + 1 && i > 1) ? (i = i - 1) : (i = images.length);
-  img_content.innerHTML = "<img class='img' src=./img/gallery/" + images[i - 1] + ">";
-}
+const imageUrls = ['image186.jpg', '123.jpg', '222.jpg', '111.jpg', '444.jpg'];
+
+const slider = new Slider(imageUrls);
